@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         else if section == 1
         {
-            return "Abount Us"
+            return "About Us"
         }
         else
         {
@@ -105,7 +105,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return 124
         }
         else if indexPath.section == 1 {
-                return 260
+                return 300
             }
         else
         {
