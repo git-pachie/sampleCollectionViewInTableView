@@ -10,6 +10,9 @@ import UIKit
 
 class CellTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var callclick: CustomPackageClick!
+    
+    
     let myArray = ["PACKAGE1", "PACKAGE2", "PACKAGE3", "PACKAGE4", "PACKAGE5", "PACKAGE6", "PACKAGE7", "PACKAGE8"]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -22,7 +25,7 @@ class CellTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         colcell.labelTest.text = myArray[indexPath.row]
         colcell.imageX.image = imageProduct(indexPath: indexPath)
         
-        colcell.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        colcell.layer.borderColor = #colorLiteral(red: 0.8927215934, green: 0.7369582057, blue: 0.6170789003, alpha: 0.8470588235)
         colcell.layer.borderWidth = 1
         colcell.layer.masksToBounds = true
         colcell.layer.cornerRadius = 4
@@ -80,7 +83,15 @@ class CellTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(myArray[indexPath.row])
+        //print(myArray[indexPath.row])
+        
+        if self.callclick != nil {
+            self.callclick.callSegueFromCell(selectedPackage: myArray[indexPath.row])
+        }
+        
     }
+    
+    
+    
 
 }
