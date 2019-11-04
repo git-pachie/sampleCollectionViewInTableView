@@ -16,19 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M70-NK-Anp">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M70-NK-Anp">
+                                <rect key="frame" x="0.0" y="164" width="414" height="698"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="rcZ-Kk-Ogg" customClass="CellTableViewCell" customModule="TestCollectionView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="120" id="rcZ-Kk-Ogg" customClass="CellTableViewCell" customModule="TestCollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rcZ-Kk-Ogg" id="mmh-3s-9z1">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EUs-Oj-dLR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XO5-VB-PPG">
                                                         <size key="itemSize" width="100" height="80"/>
@@ -39,31 +38,37 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell2" id="BPo-Xn-7Y9" customClass="ColCollectionViewCell" customModule="TestCollectionView" customModuleProvider="target">
-                                                            <rect key="frame" x="10" y="0.0" width="100" height="100"/>
+                                                            <rect key="frame" x="10" y="10" width="100" height="100"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="K24-gP-KTz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Package1" translatesAutoresizingMaskIntoConstraints="NO" id="0gj-N3-sOo">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                                    </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c97-Ix-ndA">
-                                                                        <rect key="frame" x="8" y="40" width="84" height="52"/>
+                                                                        <rect key="frame" x="8" y="59" width="84" height="33"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="52" id="Xza-Xb-2bh"/>
-                                                                            <constraint firstAttribute="width" constant="84" id="kLF-le-3K4"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="JLn-it-9cN"/>
+                                                                            <constraint firstAttribute="height" constant="33" id="zgu-4T-pcE"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="c97-Ix-ndA" firstAttribute="leading" secondItem="K24-gP-KTz" secondAttribute="leading" constant="8" id="Cp0-kz-NYt"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="c97-Ix-ndA" secondAttribute="trailing" constant="8" id="ZtE-cO-5H0"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="c97-Ix-ndA" secondAttribute="bottom" constant="8" id="hJf-Gm-qbd"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="c97-Ix-ndA" secondAttribute="trailing" constant="8" id="Bde-7j-lAW"/>
+                                                                    <constraint firstItem="0gj-N3-sOo" firstAttribute="top" secondItem="K24-gP-KTz" secondAttribute="top" id="H6y-ph-gEg"/>
+                                                                    <constraint firstItem="c97-Ix-ndA" firstAttribute="leading" secondItem="0gj-N3-sOo" secondAttribute="trailing" constant="-92" id="Wop-cJ-t00"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="c97-Ix-ndA" secondAttribute="bottom" constant="8" id="jC5-s1-siG"/>
+                                                                    <constraint firstItem="c97-Ix-ndA" firstAttribute="leading" secondItem="K24-gP-KTz" secondAttribute="leading" constant="8" id="zXD-hk-pT8"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
-                                                            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
+                                                                <outlet property="imageX" destination="0gj-N3-sOo" id="zTR-yw-hjh"/>
                                                                 <outlet property="labelTest" destination="c97-Ix-ndA" id="3br-pv-i6Q"/>
                                                             </connections>
                                                         </collectionViewCell>
@@ -82,6 +87,55 @@
                                             <outlet property="collview" destination="EUs-Oj-dLR" id="77g-Ug-dPB"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellx" textLabel="k9I-xs-3se" detailTextLabel="YaK-D2-32q" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="sF6-Vj-o6i">
+                                        <rect key="frame" x="0.0" y="148" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sF6-Vj-o6i" id="rEZ-NL-BmA">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k9I-xs-3se">
+                                                    <rect key="frame" x="20" y="20" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YaK-D2-32q">
+                                                    <rect key="frame" x="20" y="43.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellAboutUs" textLabel="dcD-LX-TNI" detailTextLabel="u3M-as-zD0" rowHeight="260" style="IBUITableViewCellStyleSubtitle" id="OKd-Vq-Lad">
+                                        <rect key="frame" x="0.0" y="228" width="414" height="260"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OKd-Vq-Lad" id="c1c-QC-7Ep">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dcD-LX-TNI">
+                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u3M-as-zD0">
+                                                    <rect key="frame" x="20" y="33.5" width="374" height="215"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <sections/>
                                 <connections>
@@ -89,20 +143,37 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="wBc-rq-lZa"/>
                                 </connections>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" image="TopHeaderBG" translatesAutoresizingMaskIntoConstraints="NO" id="kYK-VQ-ohk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="6Gg-Og-xgh"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="ultraLight"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="M70-NK-Anp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="431-AU-pU9"/>
-                            <constraint firstItem="M70-NK-Anp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LdL-ZW-V41"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M70-NK-Anp" secondAttribute="bottom" id="dAb-pE-yLY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M70-NK-Anp" secondAttribute="trailing" id="snF-Mg-6h1"/>
+                            <constraint firstItem="M70-NK-Anp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HPV-q0-t8T"/>
+                            <constraint firstItem="M70-NK-Anp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PCY-JL-GMZ"/>
+                            <constraint firstItem="kYK-VQ-ohk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RFL-fc-rcr"/>
+                            <constraint firstItem="M70-NK-Anp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TGp-8r-lq9"/>
+                            <constraint firstItem="M70-NK-Anp" firstAttribute="top" secondItem="kYK-VQ-ohk" secondAttribute="bottom" id="Zvp-Wg-yyR"/>
+                            <constraint firstItem="kYK-VQ-ohk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qLv-jz-Lv6"/>
+                            <constraint firstItem="kYK-VQ-ohk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vcX-O0-2b8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="M70-NK-Anp" id="oCh-XF-8xi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Package1" width="100" height="60"/>
+        <image name="TopHeaderBG" width="640" height="426"/>
+    </resources>
 </document>

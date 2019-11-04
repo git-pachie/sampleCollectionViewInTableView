@@ -10,7 +10,7 @@ import UIKit
 
 class CellTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let myArray = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"]
+    let myArray = ["PACKAGE1", "PACKAGE2", "PACKAGE3", "PACKAGE4", "PACKAGE5", "PACKAGE6", "PACKAGE7", "PACKAGE8"]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return myArray.count
@@ -20,8 +20,45 @@ class CellTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         let colcell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as!  ColCollectionViewCell
         
         colcell.labelTest.text = myArray[indexPath.row]
+        colcell.imageX.image = imageProduct(indexPath: indexPath)
+        
+        colcell.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        colcell.layer.borderWidth = 1
+        colcell.layer.masksToBounds = true
+        colcell.layer.cornerRadius = 4
+    
         
         return colcell
+    }
+    
+    func imageProduct(indexPath: IndexPath) -> UIImage {
+        switch indexPath.row {
+        case 0:
+            return UIImage.init(named: "Package1")!
+        case 1:
+            return UIImage.init(named: "Package2")!
+            
+        case 2:
+        return UIImage.init(named: "Package3")!
+            
+         case 3:
+            return UIImage.init(named: "Package4")!
+            
+        case 4:
+        return UIImage.init(named: "Package5")!
+            
+        case 5:
+        return UIImage.init(named: "Package6")!
+            
+        case 6:
+        return UIImage.init(named: "Package7")!
+            
+        case 7:
+        return UIImage.init(named: "Package8")!
+            
+        default:
+            return UIImage.init(named: "Package1")!
+        }
     }
     
 
